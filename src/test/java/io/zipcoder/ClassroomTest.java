@@ -110,7 +110,8 @@ public class ClassroomTest {
        ArrayList<Double>examScores9= new ArrayList<Double>(Arrays.asList(47.0,90.0));
        Student student9 = new Student("Leon10", "Hunter10", examScores9);
        classroom.addStudent(student9);
-
-       System.out.println( classroom.getGradeBook());
+       String expected="  Grade A";
+   Assert.assertEquals(expected,classroom.getGradeBook().get(student));
+    
    }
 }
